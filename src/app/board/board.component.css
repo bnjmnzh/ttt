@@ -1,0 +1,10 @@
+main {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 0;
+}
+
+app-block {
+    border: 1px solid #b2bec3;
+    height: 200px;
+}
