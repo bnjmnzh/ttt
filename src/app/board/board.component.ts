@@ -24,7 +24,7 @@ export class BoardComponent implements OnInit {
   }
 
   get player() {
-    return this.xIsNext ? 'X' : '0';
+    return this.xIsNext ? 'X' : 'O';
   }
 
   makeMove(idx: number) {
@@ -47,19 +47,16 @@ export class BoardComponent implements OnInit {
       [0, 4, 8],
       [2, 4, 6]
     ];
-
-    for (let i =0; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
       if (
-        this.blocks[a] && 
-        this.blocks[a] == this.blocks[b] &&
-        this.blocks[a] == this.blocks[c]
+        this.blocks[a] &&
+        this.blocks[a] === this.blocks[b] &&
+        this.blocks[a] === this.blocks[c]
       ) {
         return this.blocks[a];
       }
     }
     return null;
   }
-
-
 }
